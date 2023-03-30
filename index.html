@@ -13,15 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,100&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/brain.js/2.0.0-beta.19/browser.min.js">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <script src="index.js"></script> 
 </head>
 
 <body>
   <div id="container">
 
   </div>
-  <header class="header">
+  <header class="header header-wrapper d-flex lazy">
     <div class="announcement">Shop101 is a Glance company</div>
 
 
@@ -44,46 +46,819 @@
         <a href="#">Blog</a>
         <a href="#">Learn</a>
         <a href="#">Become a Supplier</a>
-       
+
         <button id="button"><a href="#">RESELL ONLINE</a></button>
       </div>
     </div>
 
 
 
-   <!-- <----------MENUBAR--------->  -
-<div class="menubar">
-  <a href="#">Home</a>
-        <a href="#">For Women</a>
-        <a href="#">For Moms</a>
-        <a href="#"> For Students</a>
-        <a href="#">Bussiness Without Investment</a>
-        <a href="#">How it Works</a>
-        <a href="#">Shop101 App</a>
-       
+    <!-- <----------MENUBAR---------> -
+    <div class="menubar">
+      <a href="#">Home</a>
+      <a href="#">For Women</a>
+      <a href="#">For Moms</a>
+      <a href="#"> For Students</a>
+      <a href="#">Bussiness Without Investment</a>
+      <a href="#">How it Works</a>
+      <a href="#">Shop101 App</a>
 
-</div>
+
+    </div>
   </header>
 
 
-<section class="main-home">
-  <div id="body-main">
-   <div>
-<img src="background_img.webp" alt="">
-   </div>
+  <section class="main-home">
+    <div id="body-main">
+      <div>
+        <img src="background_img.webp" alt="">
+      </div>
 
-   <div class="main-text">
-     <h3>Resell premium product at wholeshale prices &</h3><br>
-     <h1>Earn 25,000 / month</h1><br>
-     <h3>With India's #1 Online Reseller App from home</h3>
+      
+      <div class="main-text">
+        <h3>Resell premium product at wholeshale prices &</h3><br>
+        <h1>Earn 25,000 / month</h1><br>
+        <h3>With India's #1 Online Reseller App from home</h3>
+      </div>
+
+      <div class="banner-btn">
+        <div class="d-flex justify-center align-items-center input-prefix"><label for="phoneNumber">+91</label></div>
+        <input id = "phoneNumber" type="text" maxlength="10">
+        <span><button id="sendlink" onclick="sendLink()">Get app link</button></span>
+        <div class="message success-message hide" id="linksuccess">Link sent. Please check your phone.</div>
+      </div>
+
+
+  </section>
+
+
+
+
+  <section class="steps-to-resell">
+    <div class="section-heading section-margin text-center primary-color">How to earn on India's #1 Online Reseller App:
+      Shop101?</div>
+    <div class="text-center">
+      <div class="separator dark short separator-margin"></div>
+    </div>
+    <div class="step-to-resell">
+      <div class="container">
+        <div class="row step-to-resell-row">
+          <div class="col-12 col-lg-4 step-to-resell-image">
+            <img
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-1.webp"
+              alt="">
+
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="step-title">Pick The Products You Would<br>Like to Resell On Your Online Store</div>
+            <div class="step-sub-title">Add your margins &amp; earn up to Rs.25,000 per month<br>from home without
+              investment.</div><button class="button secondary get-the-app" data-cid="2" aria-expanded="false">GET THE
+              APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-to-resell">
+      <div class="container">
+        <div class="row step-to-resell-row reverse">
+          <div class="col-12 col-lg-4 step-to-resell-image">
+            <img
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-2.webp">
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="step-title">Share the products on<br>WhatsApp, Facebook,<br>and Instagram</div>
+            <div class="step-sub-title">You can share product images and videos from your online store<br>with your
+              customers as easy as 1-2-3.</div><button class="button secondary get-the-app" data-cid="3"
+              aria-expanded="false">GET THE APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-to-resell">
+      <div class="container">
+        <div class="row step-to-resell-row">
+          <div class="col-12 col-lg-4 step-to-resell-image">
+            <img
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-3.webp" />
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="step-title">Leave The Payment<br>Collection And<br>Deliveries To Us</div>
+            <div class="step-sub-title">For your online store,<br>we will collect your payments.<br>The customers can
+              make payments online<br>or can pay cash on delivery (COD)</div><button
+              class="button secondary get-the-app" data-cid="4" aria-expanded="false">GET THE APP <img
+                class="lazy loaded" alt="arrow" data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step-to-resell">
+      <div class="container">
+        <div class="row step-to-resell-row reverse">
+          <div class="col-12 col-lg-4 step-to-resell-image">
+            <img
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-4.webp">
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="step-title">Start Your Online Business<br>From Home</div>
+            <div class="step-sub-title">Start reselling and earn up to ₹25,000/month<br>from your online store with
+              Shop101</div><button class="button secondary get-the-app" data-cid="5" aria-expanded="false">GET THE APP
+              <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- /***** sec video*****/ -->
+
+
+  <div class="video-section lazy" data-lazy-function="loadJS"
+    data-files="https://unpkg.com/micromodal/dist/micromodal.min.js,https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/video-section.js"
+    data-onload-function="initModal" data-ll-status="entered">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-flex-end" style="max-width: 97.5%">
+          <div class="languages d-flex align-items-center justify-center">
+            <div data-video="CKtdP8n8tv8" data-mode="english" class="language english active text-center">ENGLISH</div>
+            <div class="divide"></div>
+            <div data-video="59X8tJQJT3M" data-mode="hindi" class="language hindi text-left">हिन्दी</div>
+          </div>
+        </div>
+      </div>
+      <div class="video-image-container" data-micromodal-trigger="modal-1">
+        <div class="row">
+          <div class="col-12">
+            <div class="video-image-display english active"><img class="video-image lazy full-width loaded" alt="Video"
+                data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/video-section/english/video.jpg">
+            </div>
+            <div style="display: none" class="video-image-display hindi"><img class="video-image lazy full-width"
+                data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/video-section/hindi/video.jpg"
+                alt="Video"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="banner-btn">
- <button><a href="#">+91</a><span><button>get app link</button></span>
-</div>
+
+  <!-- why shop 101 section -->
 
 
-</section>
+  <div class="why-shop101 lazy" id="why-shop101" data-lazy-function="loadBg"
+    data-smbg="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/why-shop101/mobile-background.svg"
+    data-lgbg="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/why-shop101/desktop-background.jpg"
+    data-ll-status="entered"
+    style="background-image: url(&quot;https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/why-shop101/desktop-background.jpg&quot;);">
+    <div class="section-heading section-margin text-center">
+      <div>Why Shop101 is the</div>
+      <div>&nbsp;#1 Trusted Reselling App</div>
+    </div>
+    <div class="text-center">
+      <div class="separator light short separator-margin"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="why">
+            <div class="title">90 Lakh +</div>
+            <div class="description description-break-line">
+              <div>Registered Resellers</div>
+              <div>&nbsp;Like You!</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="why">
+            <div class="title">Rs.1000 Crore +</div>
+            <div class="description description-break-line">
+              <div>Worth Products</div>
+              <div>&nbsp; Delivered</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="why">
+            <div class="title">1 Crore +</div>
+            <div class="description description-break-line">
+              <div>Orders</div>
+              <div>&nbsp;Placed</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="why no-separator">
+            <div class="title">Friday is Salary Day!</div>
+            <div class="description">
+              <div>Your earnings credited</div>
+              <div>4 times in month!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- testimonials -->
+
+
+  <div class="testimonials">
+    <div class="section-heading section-margin text-center primary-color">Our Happy Reseller Community</div>
+    <div class="text-center">
+      <div class="separator dark short separator-margin"></div>
+    </div>
+    <div class="container">
+      <div class="row d-flex justify-center">
+        <div class="col-12">
+          <div class="glider-contain">
+            <div class="slider-container glider draggable">
+              <div class="glider-track" style="width: 2220px;">
+                <div class="testimonial text-center glider glider-slide active visible left-1" data-gslide="0"
+                  style="height: auto; width: 370px;">
+                  <div><img class="quote lazy loaded" alt="Quote" data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/quote.png">
+                  </div>
+                  <div class="description">I'm able to support my husband financially and my kids go to better school
+                    today. Shop101 helped me win my confidence back when I had lost faith in my capabilities.</div>
+                  <div><img class="customer-image lazy loaded" alt="Laxmi image" data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/customers/laxmi.jpg">
+                  </div>
+                  <div class="about-customer bold">Laxmi,</div>
+                  <div class="about-customer">Homemaker</div>
+                </div>
+                <div class="testimonial text-center glider glider-slide center visible" data-gslide="1"
+                  style="height: auto; width: 370px;">
+                  <div><img class="quote lazy loaded" alt="Quote" data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/quote.png">
+                  </div>
+                  <div class="description">On the edge of losing my job, who would have thought I'll start my own
+                    Reselling Business and earn more than my last salary. Thank you my Shop101 family!</div>
+                  <div><img class="customer-image lazy loaded" alt="Pavan image" data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/customers/pavan.jpg">
+                  </div>
+                  <div class="about-customer bold">Pavan,</div>
+                  <div class="about-customer">Full Time Shop101 Reseller</div>
+                </div>
+                <div class="testimonial text-center glider glider-slide visible right-1" data-gslide="2"
+                  style="height: auto; width: 370px;">
+                  <div><img class="quote lazy loaded" alt="Quote" data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/quote.png">
+                  </div>
+                  <div class="description">I started small but with the money I made by reselling with Shop101, I have
+                    been able to even buy a car &amp; a home. My husband and family believe in me more than ever!</div>
+                  <div><img class="customer-image lazy loaded" alt="Sadiya image" data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/customers/sadiya.jpg">
+                  </div>
+                  <div class="about-customer bold">Sadiya,</div>
+                  <div class="about-customer">Mother</div>
+                </div>
+                <div class="testimonial text-center glider glider-slide right-2" data-gslide="3"
+                  style="height: auto; width: 370px;">
+                  <div><img class="quote lazy"
+                      data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/quote.png"
+                      alt="Quote"></div>
+                  <div class="description">I've came a long way from getting 3-4 orders to buying my own car and even a
+                    house with the money I earned with my Reselling Business. Who says a married woman can't achieve big
+                    heights? I did, with Shop101. Today, my husband and family believe in me more than ever.</div>
+                  <div><img class="customer-image lazy"
+                      data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/customers/sahasri.jpg"
+                      alt="Sahasri image"></div>
+                  <div class="about-customer bold">Sahasri,</div>
+                  <div class="about-customer">Housewife</div>
+                </div>
+                <div class="testimonial text-center glider glider-slide right-3" data-gslide="4"
+                  style="height: auto; width: 370px;">
+                  <div><img class="quote lazy"
+                      data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/quote.png"
+                      alt="Quote"></div>
+                  <div class="description">The Shop101 team is very helpful. They taught me reselling and even a college
+                    student like me can earn more than ₹30,000 every month!</div>
+                  <div><img class="customer-image lazy"
+                      data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/customers/kamlesh.jpg"
+                      alt="Kamlesh image"></div>
+                  <div class="about-customer bold">Kamlesh,</div>
+                  <div class="about-customer">Student</div>
+                </div>
+                <div class="testimonial text-center glider glider-slide right-4" data-gslide="5"
+                  style="height: auto; width: 370px;">
+                  <div><img class="quote lazy"
+                      data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/quote.png"
+                      alt="Quote"></div>
+                  <div class="description">My in-laws and husband were not supportive but with Shop101, I started taking
+                    care of all household expenses. They now support me in every way, and my neighbors want to be like
+                    me!</div>
+                  <div><img class="customer-image lazy"
+                      data-src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/customers/kokila.jpg"
+                      alt="Kokila Mohan image"></div>
+                  <div class="about-customer bold">Kokila Mohan,</div>
+                  <div class="about-customer">Homemaker</div>
+                </div>
+              </div>
+            </div>
+            <div role="tablist" class="dots glider-dots"><button data-index="0" aria-label="Page 1" role="tab"
+                class="glider-dot active"></button><button data-index="1" aria-label="Page 2" role="tab"
+                class="glider-dot "></button></div><button role="button" aria-label="Previous" class="glider-prev"
+              id="glider-prev-2"><img class="slider-arrow lazy loaded" alt="" data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/left-arrow.svg"></button>
+            <button role="button" aria-label="Next" class="glider-next" id="glider-next-2"><img
+                class="slider-arrow lazy loaded" alt="" data-ll-status="loaded"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/testimonials/right-arrow.svg"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- features -->
+  <div class="features">
+    <div class="section-heading section-margin text-center primary-color">How we ensure your success</div>
+    <div class="text-center">
+      <div class="separator dark short separator-margin"></div>
+    </div>
+    <div class="secondary-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6">
+            <div class="feature">
+              <div class="feature-image"><img class="lazy loaded" alt="account manager" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/features/account-manager.svg">
+              </div>
+              <div class="feature-text">Quality products at<br>wholesale price</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6">
+            <div class="feature">
+              <div class="feature-image"><img class="lazy loaded" alt="website" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/features/website.svg">
+              </div>
+              <div class="feature-text">Your Website<br>FREE!</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6">
+            <div class="feature">
+              <div class="feature-image"><img class="lazy loaded" alt="updates" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/features/updates.svg">
+              </div>
+              <div class="feature-text">Regular updates<br>for each order</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6">
+            <div class="feature">
+              <div class="feature-image"><img class="lazy loaded" alt="Training Program" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/features/training-program.svg">
+              </div>
+              <div class="feature-text">Free Training Programs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- partners content -->
+
+  <div class="partners-container">
+    <div class="section-heading section-margin text-center primary-color">Our Partners</div>
+    <div class="text-center">
+      <div class="separator dark short separator-margin"></div>
+    </div>
+    <div class="sub-title primary-color text-center shipping-title">SHIPPING</div>
+    <div class="secondary-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="partners">
+              <div class="partner"><img class="partner-image lazy loaded" alt="Fedex ground" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/shippers/fedex-ground.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="Fedex express" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/shippers/fedex-express.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="Ecom express" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/shippers/ecom-express.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="Delhivery" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/shippers/delhivery.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="Bluedart" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/shippers/bluedart.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="DTDC" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/shippers/dtdc.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sub-title primary-color text-center payment-title">PAYMENTS</div>
+    <div class="secondary-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="partners payments">
+              <div class="partner payment-mode hide-md">Cards</div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="Visa" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/visa.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="mastercard" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/mastercard.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="maestro" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/maestro.jpg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="american express" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/american-express.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="rupay" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/rupay.svg">
+              </div>
+              <div class="partner payment-mode hide-md">Banks</div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="SBI bank" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/sbi.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="ICICI bank"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/icici.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="HDFC bank"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/hdfc.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="AXIS bank"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/axis.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="CITI bank"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/citi.svg">
+              </div>
+              <div class="partner payment-mode hide-md">Wallets</div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="PAYTM" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/paytm.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="Freecharge"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/freecharge.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="Mobikwik" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/mobikwik.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="Jio Money"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/jiomoney.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="Airtel money"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/airtelmoney.svg">
+              </div>
+              <div class="partner payment-mode hide-md">Gateways</div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="CCAvenue" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/ccavenue.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="Razorpay" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/razorpay.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="Payu money"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/payu.svg">
+              </div>
+              <div class="partner"><img class="partner-image lazy loaded" alt="UPI" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/upi.svg">
+              </div>
+              <div class="partner hide-md"><img class="partner-image lazy loaded" alt="More" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/partners/payments/more.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center partner-lower-text many-more">and many more<br>Cash on Delivery (COD) option available for
+      Payment</div>
+    <div class="text-center cod partner-lower-text">Cash on Delivery (COD) option available for Payment</div>
+  </div>
+
+
+
+  <!-- footer seo -->
+
+  <div class="footer-seo">
+    <div class="seo-column">
+      <div class="seo-block">
+        <div class="seo-title">What is Shop101?</div>
+        <div class="seo-body">Shop101 is India's #1 Trusted Reselling app. If you're one of those who want to start
+          their own online business but do not have the investment yet, this is a great opportunity for you to start
+          your business via reselling app. All you need is a smartphone and a good internet connection.<br>Shop101 is
+          one of the <a href="https://www.shop101.com/blog/best-reseller-apps/" target="_blank">best reseller apps</a>
+          in India trusted by more than 1 Lakh+ resellers across the country. You can start your business right away and
+          earn up to ₹25000 every month.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">What is Online Reselling?</div>
+        <div class="seo-body">In simple terms, <a href="https://www.shop101.com/blog/online-reselling/"
+            target="_blank">online reselling</a> is buying products from a manufacturer and selling them to customers
+          after adding a margin amount with the help of the internet.<br>Many reseller apps like Shop101 has made it
+          easier for resellers to start their own <a href="https://blog.shop101.com/online-reselling-business-ideas/"
+            target="_blank">online reselling business</a>. You do not need to own a shop with online reselling. Simply,
+          share products from the Shop101 app to your customers, get orders, add your margin and resell products online.
+          You do not need to invest any money in your online reselling business.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">How do I become a reseller of Shop101?</div>
+        <div class="seo-body">All you need to do to become a <a
+            href="https://blog.shop101.com/how-to-be-a-reseller-online/" target="_blank">reseller online</a> with
+          Shop101 is download the Shop101 app and start reselling. Shop101 does not take any subscription fees for you
+          to <a href="https://www.shop101.com/blog/become-a-reseller-online-in-india/" target="_blank">become a reseller
+            online in India</a>. Once you download the app on your smartphone, you can browse through the products,
+          choose a niche, and start reselling the products<br>You can start your online business today and earn more
+          than ₹25000 from the comfort of your home.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">How to become an Entrepreneur?</div>
+        <div class="seo-body">At some point in time, we all have had this question in our minds, <a
+            href="https://blog.shop101.com/how-to-become-entrepreneur/" target="_blank">‘How to become an
+            entrepreneur?'</a>. In simple words, an entrepreneur is anybody who starts a business and wants to profit
+          from it. While most businesses require an investment before it starts making a profit, much <a
+            href="https://blog.shop101.com/online-reseller-business-opportunities-in-india/" target="_blank">online
+            business opportunities</a> have opened up that requires zero investment and can be done from anywhere,
+          online reselling being one of them.<br>If you wish to become an entrepreneur, online reselling with Shop101 is
+          a good way to start a business. It is a good opportunity for homemakers to stand on their feet and also great
+          for people with 9-5 jobs and college students to make some money on a side hustle. You can earn up to ₹25000
+          depending on the amount of time you can devote to it.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">How to earn money online by reselling products?</div>
+        <div class="seo-body">Online reselling is emerging as one of the <a
+            href="https://blog.shop101.com/best-ways-to-earn-money-online/" target="_blank">best ways to make money
+            online in India</a>. The best part is, with online reselling, you can <a
+            href="https://blog.shop101.com/earn-money-online-without-investment/" target="_blank">earn money online
+            without investment</a>.<br>Online reselling is part of social commerce. As the word suggests, you have to be
+          part of social media platforms, and share the products after adding a margin that you wish to resell. The
+          customer will contact you and you can take the contact details. You can now go to your Shop101 app, choose the
+          product wanted by your customer. Share the contact details and address and add your margin to the product. The
+          delivery will be done by Shop101 and the payment will be transferred to you in a week's time.<br>If you're
+          still googling, <a href="https://blog.shop101.com/how-to-earn-extra-income/" target="_blank">‘How to earn
+            extra income?'</a>, we assure you there is no better way than online reselling! Devote 3-4 hours every day
+          and earn ₹25000 from the comfort of your home.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">Reselling Through Facebook</div>
+        <div class="seo-body">We're sure you must be aware of Facebook and scrolling through the posts on the platform.
+          But, did you know that you can earn money by using Facebook? If you're googling right now about how to make
+          money from Facebook, let's tell you the answer- online reselling.<br>So, how to be a reseller on Facebook?
+          Sign up on Facebook if you haven't already and become part of Facebook Marketplace. This opens up your
+          business to a wider customer base and you can experiment with more products here. Sharing products on Facebook
+          is easy! Add your margin and add a few quirky headlines with your products. Make sure you're prompt with your
+          responses to potential customers.<br>Start your reselling business on Facebook with Shop101 today.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">Reselling On Whatsapp</div>
+        <div class="seo-body">Gone are the days when Whatsapp was limited to sending and receiving messages! If you're
+          starting out as an online reseller, it is the best platform to build your business.<br>Share products on
+          Whatsapp with your friends and family member. You can share photos of your products as Whatsapp share via the
+          Shop101 app. Once they start showing interest, build a conversation with them and resell the
+          product.<br>Reselling on Whatsapp groups is one of the most profitable ways to build your reselling business.
+          A group means more people and more potential customers. So, don't forget to share your products on family and
+          friends groups on Whatsapp.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">Reselling On Instagram</div>
+        <div class="seo-body">Instagram is emerging as one of the most popular platforms for online reselling. So, how
+          to <a href="https://www.shop101.com/blog/make-money-through-instagram/" target="_blank">earn money from
+            Instagram</a> by online reselling? Firstly, create your account on Instagram and change the settings to the
+          business account. Start posting product photos via the Shop101 app on your Instagram account.<br><a
+            href="https://www.shop101.com/blog/reselling-on-instagram/" target="_blank">Reselling on Instagram</a> is
+          becoming popular but it will take some time to build your business on the platform. So be patient and don't
+          give up!</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">Who all can earn money online?</div>
+        <div class="seo-body">The answer to this question is anyone and everyone! Whether you are a new entrepreneur,
+          student, woman on a career break. There is scope for everyone!</div>
+      </div>
+    </div>
+    <div class="seo-column">
+      <div class="seo-block">
+        <div class="seo-title">Pick, Share, Add &amp; Earn: Start Making Money In 4 Simple Steps</div>
+        <div class="seo-body">With Shop101, you can start your online business without any investment and <a
+            href="https://blog.shop101.com/earn-money-online-without-investment/" target="_blank">earn money without
+            investment</a> in just 4 steps<br>
+          <ul>
+            <li>Pick- Choose products from the Shop101 app</li>
+            <li>Share- Share product photos on social media platforms like Whatsapp and Facebook</li>
+            <li>Add- Add your margin amount to the wholesale price and share these prices with customers</li>
+            <li>Earn - Resell products and earn up to ₹25,000 every month</li>
+          </ul><br>Shop101 is one of the <a href="https://www.shop101.com/blog/best-online-earning-app/"
+            target="_blank">best online earning apps</a>. It is easy to use and anyone can use it to earn money.
+        </div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">What are some of the online business ideas for beginners?</div>
+        <div class="seo-body"><br>As a new entrepreneur, it is difficult to make choices and for some people, making
+          mistakes is simply not an option considering the high risk and money that is involved in starting a new
+          business. That is why we say, online reselling is one of the <a
+            href="https://blog.shop101.com/online-business-ideas-for-beginners/" target="_blank">best online business
+            ideas for beginners</a>. You don't need any to make any investment on your part. All you need is a
+          smartphone, you can resell at your own pace and schedule from the comfort of your home. If done consistently,
+          there are high returns of ₹25000 every month.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">How to earn money from home for ladies?</div>
+        <div class="seo-body">There is no limitation of opportunities for women who prefer working from home. From
+          starting their own businesses to working for a company; there's a plethora of options. There's a variety of
+          things that support the concept of <a
+            href="https://www.shop101.com/blog/how-to-earn-money-from-home-for-ladies/" target="_blank">how to earn
+            money from home for ladies</a> who are looking for work to do.<br>We take pride in the fact that Shop101 has
+          enabled many ladies to have their own identity and stand on their own feet. By reselling with Shop101, many
+          women are entrepreneurs and run their successful online business without neglecting their families.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">What are some of the ways to earn money online without investment for students?</div>
+        <div class="seo-body">India is the youngest country in the world. With so many youngsters today trying to make
+          their own name and space in this vast country, Shop101 is determined to help them with this quest. In our
+          efforts to make online reselling one of the best online businesses for students in India, our business model
+          helps them to start their own entrepreneurial journey at a young age and <a
+            href="https://blog.shop101.com/earn-money-online-without-investment-for-students/" target="_blank">earn
+            money online without investment for students</a>.<br>A smartphone and a will to work out some time has
+          helped thousands of students earn ₹25000 every month.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">Work from Home jobs( Full time and Part-time)</div>
+        <div class="seo-body">Many people look for part-time home-based jobs for extra income. If you're a woman staying
+          at home, a college student or a stay-at-home mom, there are a lot of options for you in the virtual world to
+          earn money.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">What are some of the options for online jobs for women at home?</div>
+        <div class="seo-body">The internet has opened a lot of options for people especially women who may not be able
+          to leave home due to time constraints or other issues. Some of the best options for <a
+            href="https://blog.shop101.com/online-jobs-for-women-at-home/" target="_blank">online jobs for women</a> at
+          home include social media marketing, blogging and online reselling.<br>If you have that entrepreneurial streak
+          in you, then you can start your own online reselling business with Shop101 from the comfort of your home with
+          zero investment and earn around ₹25000 every month.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">What are some of the best online part-time jobs for students?</div>
+        <div class="seo-body">If you're someone who is financing your college education or just want to earn some money
+          for that extra pocket money, then reselling on Shop101 is one of the perfect <a
+            href="https://www.shop101.com/blog/online-part-time-jobs-for-students/" target="_blank">online part-time
+            jobs for students</a> in India. It needs little time from your schedule every day and basic knowledge to use
+          social media. If done consistently, you can earn ₹25000 every month without any investment.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">What are some of the online jobs for stay-at-home mothers?</div>
+        <div class="seo-body">There are <a href="https://www.shop101.com/blog/stay-at-home-mom-jobs-online/"
+            target="_blank">stay-at-home mom jobs online</a> that you can take up if you want to give equal importance
+          to your family and work. One of the best options is online reselling with Shop101. Some of the perks include -
+          flexible schedule and zero investment.<br>Who says stay-at-home moms can't have it all! You can earn up to
+          ₹25000 by reselling online with Shop101.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">How Do I Track Orders &amp; Delivery?</div>
+        <div class="seo-body">‘How to track my order?' is one of the most common questions 99% of new resellers have!
+          Shop101 has a tracker that will update you about all the orders from the app itself.<br>We have collaborated
+          with the most reputed courier partners across India for making sure deliveries reach your customer safely.
+          Most of these courier companies have delivery courier service tracking and send daily updates to customers as
+          well as resellers about the latest delivery status of the orders.</div>
+      </div>
+      <div class="seo-block">
+        <div class="seo-title">Different Modes of Payments</div>
+        <div class="seo-body">What do most customers prefer- cash on delivery or online payment? Our answer- both. With
+          the rise of digital payments, many customers find it easier to pay online. However, a lot of customers when
+          buying from a new reseller want to pay cash only when they receive their order.<br>Thankfully at Shop101, we
+          offer multiple payment options. This includes cash on delivery (COD) as well as different online payment
+          methods such as net banking, credit/debit card, UPI etc.</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- footer -->
+  <br />
+
+  <div class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <div class="footer-left">
+              <div class="d-flex">
+                <div>
+                  <div class="tagline">Start Making Money Online<br>In less than 2 minutes!</div>
+                  <div class="sub-text">Pick, Share &amp; Earn</div><a rel="noopener" target="_blank"
+                    href="https://101.sh/shop101app"><img class="googleplay lazy loaded" alt="google play"
+                      data-ll-status="loaded"
+                      src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/googleplay.svg"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-lg-9 hide-md">
+            <div class="footer-right">
+              <div class="menu-container d-flex justify-flex-end">
+                <div>
+                  <div class="menu-right"><a target="_blank" rel="noopener"
+                      href="https://www.shop101.com/blog/faq/">FAQs </a><a target="_blank" rel="noopener"
+                      href="https://www.shop101.com/blog/knowledge-base/">Knowledge Base </a><a target="_blank"
+                      rel="noopener" href="https://www.shop101.com/blog/become-a-supplier/">Become a Supplier </a><a
+                      target="_blank" rel="noopener" href="/how-it-works">How it Works </a><a target="_blank"
+                      rel="noopener" href="/shop101-app">Shop101 App </a><a target="_blank" rel="noopener"
+                      href="/about-us">About Us </a><a target="_blank" rel="noopener" href="/contact">Contact Us </a><a
+                      target="_blank" rel="noopener"
+                      href="https://www.shop101.com/static/img/notice-of-work-timing.pdf">Notice of work timing</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="menu-right"><a target="_blank" rel="noopener" href="/work-from-home-women">Work from Home
+                      Women </a><a target="_blank" rel="noopener" href="/part-time-jobs-students">Part Time Jobs for
+                      Students </a><a target="_blank" rel="noopener" href="/work-from-home-mom">Work from Home Moms
+                    </a><a target="_blank" rel="noopener" href="/business-without-investment">Online Business Without
+                      Investment</a></div>
+                </div>
+                <div class="menu-left"><a target="_blank" rel="noopener"
+                    href="https://www.shop101.com/blog/online-reselling/?utm_source=home_page_shop101&amp;utm_medium=footer&amp;utm_campaign=online_reselling">Online
+                    Reselling </a><a target="_blank" rel="noopener"
+                    href="https://www.shop101.com/blog/earn-money-online/?utm_source=home_page_shop101&amp;utm_medium=footer&amp;utm_campaign=earn_money_online">Earn
+                    Money Online </a><a target="_blank" rel="noopener"
+                    href="https://www.shop101.com/blog/online-part-time-jobs/?utm_source=home_page_shop101&amp;utm_medium=footer&amp;utm_campaign=online_part_time_jobs">Online
+                    Part Time Jobs </a><a target="_blank" rel="noopener"
+                    href="https://www.shop101.com/blog/work-from-home-online-jobs/?utm_source=home_page_shop101&amp;utm_medium=footer&amp;utm_campaign=work_from_home_online_jobs">Work
+                    From Home Online Jobs</a></div>
+                <div class="menu-right"><a href="https://www.shop101.com/blog/">Blog </a><a
+                    href="https://www.linkedin.com/company/shop101/jobs/">We are Hiring </a><a
+                    href="https://www.shop101.com/static/termsOfService.html">Terms and Conditions </a><a
+                    href="https://www.shop101.com/static/privacyPolicy.html">Privacy Policy</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 menu-mobile-container">
+            <div class="menu-mobile"><a target="_blank" rel="noopener" href="/work-from-home-women">Work from Home Women
+              </a><a target="_blank" rel="noopener" href="/part-time-jobs-students">Part Time Jobs for Students </a><a
+                target="_blank" rel="noopener" href="/work-from-home-mom">Work from Home Moms </a><a target="_blank"
+                rel="noopener" href="/business-without-investment">Online Business Without Investment</a><br><a
+                target="_blank" rel="noopener" href="https://www.shop101.com/blog/faq/">FAQs </a><a target="_blank"
+                rel="noopener" href="https://www.shop101.com/blog/knowledge-base/">Knowledge Base </a><a target="_blank"
+                rel="noopener" href="https://www.shop101.com/blog/become-a-supplier/">Become a Supplier </a><a
+                target="_blank" rel="noopener" href="/how-it-works">How it Works </a><a target="_blank" rel="noopener"
+                href="/shop101-app">Shop101 App </a><a target="_blank" rel="noopener" href="/about-us">About Us </a><a
+                target="_blank" rel="noopener" href="/contact">Contact Us </a><a target="_blank" rel="noopener"
+                href="https://www.shop101.com/static/img/notice-of-work-timing.pdf">Notice of work timing</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 hide-md">
+            <div class="social-icons d-flex"><a target="_blank" rel="noopener"
+                href="https://www.facebook.com/shop101.ind/"><img class="lazy loaded" alt="facebook"
+                  data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/footer/social-icons/facebook.svg">
+              </a><a target="_blank" rel="noopener" href="https://www.instagram.com/getshop101/"><img
+                  class="lazy loaded" alt="instagram" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/footer/social-icons/instagram.svg">
+              </a><a target="_blank" rel="noopener" href="https://twitter.com/shop101"><img class="lazy loaded"
+                  alt="twitter" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/footer/social-icons/twitter.svg">
+              </a><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/shop101"><img
+                  class="lazy loaded" alt="linkedin" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/footer/social-icons/linkedin.svg">
+              </a><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCYj9zI24Ls0IZMP1wznHc7w"><img
+                  class="lazy loaded" alt="youtube" data-ll-status="loaded"
+                  src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/footer/social-icons/youtube.svg"></a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="copyright">Copyright 2020 Shop101, a Glance company</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-footer">
+      <div class="text1">Start Reselling<br>Download App Now</div><a rel="noopener" href="https://101.sh/shop101app"
+        target="_blank"><img class=""
+          src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/cta-foot.png"
+          alt="google play"></a>
+    </div>
+  </div>
+
 
 
   </div>
