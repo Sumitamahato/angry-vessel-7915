@@ -1,4 +1,4 @@
-*{
+/* *{
   margin :0;
   padding:0;
   box-sizing:border-box;
@@ -6,30 +6,33 @@
   font-family: 'Jost', sans-serif;
   list-style:none;
 
-}
+} */
 
 #trust>:nth-child(1){
   margin-top: 10px;
-}
-#trust>:nth-child(2){
+} 
+ #trust>:nth-child(2){
   margin-top: -5px;
 
-}
-#trust{
+} 
+ #trust{
   margin-left:5px;
 }
+
 #menu-child{
-  /* background: red; */
+ background: red; 
   display: flex;
   margin:auto;
   width:100%;
-  color:black
+  color:black;
+  border:5px solid black;
 }
 .links{
 display:flex;
 justify-content:space-between;
 width: 60%;
-margin: auto;
+align-items: center;
+/* margin: auto; */
 }
 
 .links a{
@@ -70,7 +73,9 @@ margin: auto;
   /* text-decoration: underline;} */
 }
 
-
+body{
+  width: 1200px;
+}
 
 
 
@@ -109,22 +114,6 @@ margin: auto;
 }
 
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
 #body-main{
   display:flex;
 }
@@ -146,18 +135,37 @@ summary {
 section{
   padding: 5% 10%;
 }
-.main-home{
-  width:100%
+/* .main-home{
+  width:100%;
   height:100vh;
   background-image:url("https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* overflow: hidden; */
+
+  /* background-size: cover; */
+  /* background-position: absolute; */
   /* background-position:center; */
   /* background-size:cover; */
-  display:grid;
-  grid-templete-colums:repeat(1,fr);
-  align-items:center;
-  
-}
+  /* display:grid; */
+  /* grid-templete-colums:repeat(1,fr); */
+  /* align-items:center; */
+ 
+/* } */ */
 
+
+
+
+/* changes done-------> */
+
+
+
+
+
+
+/* changes done-------> */
 
 
 .menubar{
@@ -201,3 +209,52 @@ color: black;
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
  }
+ 
+ box {
+  padding: 10px;
+}
+.box>div {
+  padding: 2px;
+  margin: 5px;
+}
+.box>div>h3{
+  text-align: center;
+  color: #fa6075
+}
+
+
+
+
+.why-shop101 {
+  color: #fff;
+  background-size: cover;
+   padding-bottom: 35px;
+   /* padding-bottom: 55px; */ 
+}
+
+.why-shop101>div {
+  display: block;
+  font-family: Open Sans,sans-serif;
+  line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: inherit;
+}
+
+
+
+.secondary-container{
+    max-width: 70%;
+    margin: 0 auto;
+
+}
+
+.secondary-container>div {
+  display: block;
+}
+
+
+.partners {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(5,1fr) 
+}

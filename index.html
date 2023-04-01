@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <script src="index.js"></script> 
+  <script src="index.js"></script>
 </head>
 
 <body>
@@ -68,25 +68,93 @@
   </header>
 
 
-  <section class="main-home">
+  <!-- <section class="main-home">
     <div id="body-main">
       <div>
         <img src="background_img.webp" alt="">
-      </div>
+      </div> -->
 
       
-      <div class="main-text">
-        <h3>Resell premium product at wholeshale prices &</h3><br>
-        <h1>Earn 25,000 / month</h1><br>
-        <h3>With India's #1 Online Reseller App from home</h3>
+  <div class="banner-image"
+    style="background-image: url(&quot;https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/background.jpg&quot;);">
+  </div>
+  <div class="banner-image"
+    style="background-image: url(&quot;https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/background.jpg&quot;);">
+  </div>
+  <div class="container">
+    <div class="row column-reverse">
+      <div class="col-12 col-lg-6">
+        <div class="reseller">
+          <picture>
+            <source media="(max-width: 992px)" class="reseller-image" type="image/webp"
+              srcset="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/mobile/reseller.webp, https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/mobile/reseller@2x.webp 2x, https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/mobile/reseller@3x.webp 3x">
+            <source media="(min-width: 992px)" class="reseller-image" type="image/webp"
+              srcset="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/desktop/reseller.webp, https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/desktop/reseller@2x.webp 2x, https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/desktop/reseller@3x.webp 3x">
+            <img class="reseller-image"
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/reseller.png"
+              alt="Reseller image">
+          </picture>
+        </div>
       </div>
+      <div class="col-12 col-lg-6 banner-text-wrapper">
+        <div class="banner-text">Resell premium product at wholesale prices &amp;</div>
+        <h1 class="earn-money">Earn ₹25,000 / month</h1>
+        <h1 class="banner-text">With India's #1 Online Reseller App from home.</h1>
+        <div class="download-wrapper">
+          <div data-cid="1" id="primary-download-action" class="download-actions-wrapper">
+            <form class="d-flex" onsubmit="event.preventDefault();">
+              <div style="width: 60%;position:relative">
+                <div class="d-flex justify-center align-items-center input-prefix"><label for="phoneNumber">+91</label>
+                </div><input id="phoneNumber" class="phoneNumber" type="text" placeholder="Your phone number">
+              </div><button class="button primary submit get-app-submit" style="width: 30%">GET APP LINK</button>
+            </form>
+            <div class="message success-message"></div>
+            <div class="message error-message"></div>
+            <div class="note">Required for sending link. Not for promotional use.</div><a target="_blank" rel="noopener"
+              href="https://www.shop101.com/android?d-8_c-3" class="d-flex download-link download-actions-playstore"
+              style="text-align: center; display: flex; align-items: center; justify-content: center;"><img
+                alt="google play" class="downloadAppButton"
+                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/googleplay-icon.png"> <span
+                style="padding-left: 8px;">DOWNLOAD &amp; EARN</span></a>
+          </div>
+        </div>
+        <div class="desktop-rating">
+          <picture>
+            <source media="(max-width: 992px)" type="image/svg+xml"
+              srcset="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/mobile/single-rating.svg">
+            <source media="(min-width: 992px)" type="image/svg+xml"
+              srcset="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/desktop/single-rating.svg">
+            <img src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/banner/stars.png"
+              alt="Rating">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <div class="banner-btn">
-        <div class="d-flex justify-center align-items-center input-prefix"><label for="phoneNumber">+91</label></div>
-        <input id = "phoneNumber" type="text" maxlength="10">
-        <span><button id="sendlink" onclick="sendLink()">Get app link</button></span>
-        <div class="message success-message hide" id="linksuccess">Link sent. Please check your phone.</div>
-      </div>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <div class="main-text">
+    <h3>Resell premium product at wholeshale prices &</h3><br>
+    <h1>Earn 25,000 / month</h1><br>
+    <h3>With India's #1 Online Reseller App from home</h3>
+  </div> -->
+
+  <div class="banner-btn">
+    <div class="d-flex justify-center align-items-center input-prefix"><label for="phoneNumber">+91</label></div>
+    <input id="phoneNumber" type="text" maxlength="10">
+    <span><button id="sendlink" onclick="sendLink()">Get app link</button></span>
+    <div class="message success-message hide" id="linksuccess">Link sent. Please check your phone.</div>
+  </div>
 
 
   </section>
@@ -94,83 +162,94 @@
 
 
 
-  <section class="steps-to-resell">
-    <div class="section-heading section-margin text-center primary-color">How to earn on India's #1 Online Reseller App:
-      Shop101?</div>
-    <div class="text-center">
-      <div class="separator dark short separator-margin"></div>
+  <!-- <section class="steps-to-resell"> -->
+  <div class="box">
+    <div>
+      <h3>HOW TO EARN ON INDIA'S #1 ONLINE RESELLER APP:SHOP101?</h3>
     </div>
-    <div class="step-to-resell">
-      <div class="container">
-        <div class="row step-to-resell-row">
-          <div class="col-12 col-lg-4 step-to-resell-image">
-            <img
-              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-1.webp"
-              alt="">
+  </div>
+  Shop101?</div>
+  <div class="text-center">
+    <div class="separator dark short separator-margin"></div>
+  </div>
+  <div class="step-to-resell">
+    <div class="container">
+      <div class="row step-to-resell-row">
+        <div class="col-12 col-lg-4 step-to-resell-image">
+          <img
+            src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-1.webp"
+            alt="">
 
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="step-title">
+            <h3>Pick The Products You Would<br>Like to Resell On Your Online Store</h3>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="step-title">Pick The Products You Would<br>Like to Resell On Your Online Store</div>
-            <div class="step-sub-title">Add your margins &amp; earn up to Rs.25,000 per month<br>from home without
-              investment.</div><button class="button secondary get-the-app" data-cid="2" aria-expanded="false">GET THE
-              APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
-                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
-          </div>
+          <div class="step-sub-title">Add your margins &amp; earn up to Rs.25,000 per month<br>from home without
+            investment.</div><button class="button secondary get-the-app" data-cid="2" aria-expanded="false">GET THE
+            APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
         </div>
       </div>
     </div>
-    <div class="step-to-resell">
-      <div class="container">
-        <div class="row step-to-resell-row reverse">
-          <div class="col-12 col-lg-4 step-to-resell-image">
-            <img
-              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-2.webp">
+  </div>
+  <div class="step-to-resell">
+    <div class="container">
+      <div class="row step-to-resell-row reverse">
+        <div class="col-12 col-lg-4 step-to-resell-image">
+          <img
+            src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-2.webp">
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="step-title">
+            <h3>>Share the products on<br>WhatsApp, Facebook,<br>and Instagram</h3>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="step-title">Share the products on<br>WhatsApp, Facebook,<br>and Instagram</div>
-            <div class="step-sub-title">You can share product images and videos from your online store<br>with your
-              customers as easy as 1-2-3.</div><button class="button secondary get-the-app" data-cid="3"
-              aria-expanded="false">GET THE APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
-                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
-          </div>
+          <div class="step-sub-title">You can share product images and videos from your online store<br>with your
+            customers as easy as 1-2-3.</div><button class="button secondary get-the-app" data-cid="3"
+            aria-expanded="false">GET THE APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
         </div>
       </div>
     </div>
-    <div class="step-to-resell">
-      <div class="container">
-        <div class="row step-to-resell-row">
-          <div class="col-12 col-lg-4 step-to-resell-image">
-            <img
-              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-3.webp" />
+  </div>
+  <div class="step-to-resell">
+    <div class="container">
+      <div class="row step-to-resell-row">
+        <div class="col-12 col-lg-4 step-to-resell-image">
+          <img
+            src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-3.webp" />
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="step-title">
+            <h3>Leave The Payment<br>Collection And<br>Deliveries To Us</h3>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="step-title">Leave The Payment<br>Collection And<br>Deliveries To Us</div>
-            <div class="step-sub-title">For your online store,<br>we will collect your payments.<br>The customers can
-              make payments online<br>or can pay cash on delivery (COD)</div><button
-              class="button secondary get-the-app" data-cid="4" aria-expanded="false">GET THE APP <img
-                class="lazy loaded" alt="arrow" data-ll-status="loaded"
-                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
-          </div>
+          <div class="step-sub-title">For your online store,<br>we will collect your payments.<br>The customers can
+            make payments online<br>or can pay cash on delivery (COD)</div><button class="button secondary get-the-app"
+            data-cid="4" aria-expanded="false">GET THE APP <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
         </div>
       </div>
     </div>
-    <div class="step-to-resell">
-      <div class="container">
-        <div class="row step-to-resell-row reverse">
-          <div class="col-12 col-lg-4 step-to-resell-image">
-            <img
-              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-4.webp">
+  </div>
+  <div class="step-to-resell">
+    <div class="container">
+      <div class="row step-to-resell-row reverse">
+        <div class="col-12 col-lg-4 step-to-resell-image">
+          <img
+            src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/mobile/step-4.webp">
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="step-title">
+            <h3>Start Your Online Business<br>From Home</h3>
           </div>
-          <div class="col-12 col-lg-4">
-            <div class="step-title">Start Your Online Business<br>From Home</div>
-            <div class="step-sub-title">Start reselling and earn up to ₹25,000/month<br>from your online store with
-              Shop101</div><button class="button secondary get-the-app" data-cid="5" aria-expanded="false">GET THE APP
-              <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
-                src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
-          </div>
+          <div class="step-sub-title">Start reselling and earn up to ₹25,000/month<br>from your online store with
+            Shop101</div><button class="button secondary get-the-app" data-cid="5" aria-expanded="false">GET THE APP
+            <img class="lazy loaded" alt="arrow" data-ll-status="loaded"
+              src="https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/reselling-steps/arrow-forward.svg"></button>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
 
@@ -216,7 +295,7 @@
     data-ll-status="entered"
     style="background-image: url(&quot;https://o1-static-pages.s3.ap-south-1.amazonaws.com/shop101-home/images/why-shop101/desktop-background.jpg&quot;);">
     <div class="section-heading section-margin text-center">
-      <div>Why Shop101 is the</div>
+      <div id="trusted">Why Shop101 is the</div>
       <div>&nbsp;#1 Trusted Reselling App</div>
     </div>
     <div class="text-center">
@@ -588,7 +667,7 @@
       <div class="seo-block">
         <div class="seo-title">How to become an Entrepreneur?</div>
         <div class="seo-body">At some point in time, we all have had this question in our minds, <a
-            href="https://blog.shop101.com/how-to-become-entrepreneur/" target="_blank">‘How to become an
+            href="https://blog.shop101.com/how-to-become-entrepreneur/" target="_blank">"How to become an
             entrepreneur?'</a>. In simple words, an entrepreneur is anybody who starts a business and wants to profit
           from it. While most businesses require an investment before it starts making a profit, much <a
             href="https://blog.shop101.com/online-reseller-business-opportunities-in-india/" target="_blank">online
@@ -609,7 +688,7 @@
           customer will contact you and you can take the contact details. You can now go to your Shop101 app, choose the
           product wanted by your customer. Share the contact details and address and add your margin to the product. The
           delivery will be done by Shop101 and the payment will be transferred to you in a week's time.<br>If you're
-          still googling, <a href="https://blog.shop101.com/how-to-earn-extra-income/" target="_blank">‘How to earn
+          still googling, <a href="https://blog.shop101.com/how-to-earn-extra-income/" target="_blank">How to earn
             extra income?'</a>, we assure you there is no better way than online reselling! Devote 3-4 hours every day
           and earn ₹25000 from the comfort of your home.</div>
       </div>
@@ -702,7 +781,7 @@
       </div>
       <div class="seo-block">
         <div class="seo-title">What are some of the options for online jobs for women at home?</div>
-        <div class="seo-body">The internet has opened a lot of options for people especially women who may not be able
+        <div class="seo-body">The internet has opened a lot of options for people especially women who may not be able.
           to leave home due to time constraints or other issues. Some of the best options for <a
             href="https://blog.shop101.com/online-jobs-for-women-at-home/" target="_blank">online jobs for women</a> at
           home include social media marketing, blogging and online reselling.<br>If you have that entrepreneurial streak
@@ -727,7 +806,7 @@
       </div>
       <div class="seo-block">
         <div class="seo-title">How Do I Track Orders &amp; Delivery?</div>
-        <div class="seo-body">‘How to track my order?' is one of the most common questions 99% of new resellers have!
+        <div class="seo-body"> How to track my order?' is one of the most common questions 99% of new resellers have!
           Shop101 has a tracker that will update you about all the orders from the app itself.<br>We have collaborated
           with the most reputed courier partners across India for making sure deliveries reach your customer safely.
           Most of these courier companies have delivery courier service tracking and send daily updates to customers as
